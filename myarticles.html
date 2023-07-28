@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Articles</title>
+</head>
+<style>
+      /* Your existing CSS styles */
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #222;
+  color: #ddd;
+}
+
+.dark-mode button {
+  background-color: #555;
+  color: #ddd;
+}
+
+.dark-mode button:hover {
+  background-color: #333;
+}
+
+/* Add other dark mode specific styles as needed */
+</style>
+<body>
+    <div class="container">
+        <button id="toggle-theme"><img src="https://png.pngtree.com/png-clipart/20210829/original/pngtree-dark-mode-icon-light-png-clipart-png-image_6661697.jpg" alt="dark/light" width="15px"></button>
+    </div>
+    <h2>MY ARTICLES</h2>
+        <p>
+        I also have a particular intrest in writing about basketball. I have written a few articles about basketball. I love to write about diffrent players and organisations. Some of my writings about basketball are below. You may look into it. I will keep adding my articles as I write more.
+        </p>
+        <br>
+        <br>
+        
+      <h1><u>JAMES HARDEN: THE ONLY LEFT-HANDED PLAYER TO WIN MVP IN 21ST CENTURY</u></h1>
+<p>James Harden's dominance on the basketball court cannot be denied. Known for his signature step-back three-pointer and exceptional scoring ability, Harden has established himself as one of the most skilled and versatile players in the NBA. His unique playing style, combined with his left-handedness, sets him apart from his contemporaries. Being a left-handed player in a predominantly right-handed sport can provide a strategic advantage. Left-handed players often catch defenders off guard, as they are used to guarding right-handed opponents. Harden's left-handedness allows him to do unpredictable moves, making it difficult for defenders to predict his next move. His ability enables him to finish at the rim with either hand, confusing opposing defences and enhancing his scoring skill.
+    <br>
+    <br>
+    
+    <img src="https://www.columbiatribune.com/gcdn/authoring/2018/06/25/NCDT/ghows-MO-6f81043d-6cf2-7a8b-e053-0100007f8ad3-de0d85bd.jpeg" alt="JH13" width="400px"> 
+    <br>
+    <br>
+    Harden's success as a left-handed player highlights the significance of adaptability in basketball. Despite being a lefty, he has showcased exceptional ball-handling skills, facilitating his ability to drive to the basket and create scoring opportunities for himself and his teammates.
+Apart from his individual stats, Harden's impact on the teams he has played for cannot be overlooked. During his tenure with the Houston Rockets, he led the team to multiple deep playoffs runs, showcasing his ability to elevate the performance of those around him. Despite falling short of winning a championship, his contributions to his teams have been immense, solidifying his status as a leader and a franchise player.
+The fact that James Harden is the only left-handed player to win the MVP in the 21st century is a validation to his exceptional talent and skill set. It emphasizes his ability to defy expectations and excel in a league dominated by right-handed players. Harden's success as a left-handed hooper serves as an inspiration to aspiring basketball players who may feel disadvantaged due to their non-conventional dominant hand.
+In conclusion, James Harden's status as the only left-handed player to win the MVP in the 21st century showcases his exceptional talent and skill set. Despite the absence of a championship title, Harden's impact on the court and his influence as a left-handed player make him one of the greatest player of modern era. As basketball continues to evolve, Harden's achievements will undoubtedly be remembered and celebrated for years to come.
+ </p>
+
+ <h2>OTHER WORKS</h2>
+</body>
+<script>
+       const toggleButton = document.getElementById("toggle-theme");
+const body = document.body;
+
+toggleButton.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  const isDarkMode = body.classList.contains("dark-mode");
+ 
+  localStorage.setItem("darkMode", isDarkMode);
+});
+
+const savedDarkMode = localStorage.getItem("darkMode");
+if (savedDarkMode !== null) {
+  body.classList.toggle("dark-mode", savedDarkMode === "true");
+}
+</script>
+</html>

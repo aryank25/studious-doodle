@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ARYAN KUMAR</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  
+}
+
+.container {
+  margin-top: 0px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color:grey;
+  color:white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  text-align:center;
+}
+
+button:hover {
+  background-color:black;
+}
+
+/* Your existing CSS styles */
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #222;
+  color: #ddd;
+}
+
+.dark-mode button {
+  background-color: #555;
+  color: #ddd;
+}
+
+.dark-mode button:hover {
+  background-color: #333;
+}
+
+/* Add other dark mode specific styles as needed */
+
+
+
+</style>
+<body>
+    <header>
+        <nav>
+  <div class="container">
+    <button id="aboutmeButton">About Me</button>
+    <button id="contactButton">Contact</button>
+    <button id="mypicturesButton">My Pictures</button>
+    <button id="myarticlesButton">My Articles</button>
+    <button id="toggle-theme"><img src="https://png.pngtree.com/png-clipart/20210829/original/pngtree-dark-mode-icon-light-png-clipart-png-image_6661697.jpg" alt="dark/light" width="15px"></button>
+    </div>
+    </nav>
+    </header>
+   
+  <div class="content">
+   <h1>Welcome Everyone!</h1>
+   <h2>This is Aryan Kumar</h2>
+   <p>
+    Hello everyone, My name is Aryan Kumar and I am a <b>passionate and ambitious first-year undergraduate student</b> on a mission to conquer the world of web development. With an insatiable hunger for knowledge and a creative spark, I have embarked on a journey to craft my very own website from scratch. I am setting my sights on becoming a <b>proficient HTML, CSS, and JavaScript</b> wizard.As a first-year student,my enthusiasm for computer science and web development is palpable. I firmly believes that the future lies in digital technology.Guided by the desire to make a meaningful impact in the digital landscape,I have immersed myself in the study of web development languages and techniques, eager to master the art of creating visually stunning and functional websites.HTML, the backbone of frontend development, is a language I finds comfort in.It is simple to use and its essential role in structuring web pages. CSS, on the other hand, allows me to express my creativity by adding vivid colors, stylish layouts, and captivating dsigns to his projects.The process of creating my own website is both exhilarating and challenging for me, but I thrives on every moment of it.<b> I believe that the website I am building is a reflection of my evolving journey as a frontend developer</b>, a canvas on which I can showcase my achievements, thoughts, and artistic inclinations. With an eye for detail and a dedication to delivering the best possible user experience,I poured my heart and soul into every line of code.
+        As I strive to achieve proficiency in frontend development, I look forward to exploring new technologies, diving deeper into the world of web design, and contributing my unique voice to the ever-evolving digital landscape. With dreams of participating in prestigious coding competitions, open-source projects and industry internships I am really excited to start this new journey.
+        <br>
+        <br>
+        <br>
+        <img src="photo 14.jpg" alt="photo14" width="500px">
+   </p>
+  </div>
+
+  <script src="script.js" defer></script>
+</head>
+</body>
+
+
+<script>
+document.getElementById("aboutmeButton").addEventListener("click", function() {
+  window.location.href = "aboutme.html";
+});
+
+document.getElementById("contactButton").addEventListener("click", function() {
+  window.location.href = "contact.html";
+});
+
+document.getElementById("mypicturesButton").addEventListener("click", function() {
+  window.location.href = "mypictures.html";
+});
+
+document.getElementById("myarticlesButton").addEventListener("click", function() {
+  window.location.href = "myarticles.html";
+});
+
+const toggleButton = document.getElementById("toggle-theme");
+const body = document.body;
+
+toggleButton.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  const isDarkMode = body.classList.contains("dark-mode");
+ 
+  localStorage.setItem("darkMode", isDarkMode);
+});
+
+const savedDarkMode = localStorage.getItem("darkMode");
+if (savedDarkMode !== null) {
+  body.classList.toggle("dark-mode", savedDarkMode === "true");
+}
+
+
+
+
+
+
+
+</script>
+
+</html>

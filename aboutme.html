@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<style>
+    .body{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    /* Your existing CSS styles */
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #222;
+  color: #ddd;
+}
+
+.dark-mode button {
+  background-color: #555;
+  color: #ddd;
+}
+
+.dark-mode button:hover {
+  background-color: #333;
+}
+
+/* Add other dark mode specific styles as needed */
+
+</style>
+<body>
+    <div class="container">
+        <button id="toggle-theme"><img src="https://png.pngtree.com/png-clipart/20210829/original/pngtree-dark-mode-icon-light-png-clipart-png-image_6661697.jpg" alt="dark/light" width="15px"></button>
+    </div>
+    <h1>ABOUT ME</h1>
+    <p>
+        Hey everyone. My name is Aryan Kumar and i am currently a undergrad from a college which I don't exactly know because counselling process is going on but I hope to get into the best college. You can find me with username @aryank25 on github and @aryank_2512 on my instagram handle.Talking about  me, I have recently started coding and I hope to master the frontend soon. I have learnt languages like
+        HTML,CSS AND JAVASCRIPT. My hobbies include playing basketball, reading newspaper and clicking photo of beautiful skies.You can refer to "My pictures" link to see the pictures I have taken. I wish to clear GSOC, Hackathon and other competitons related to coding. I have started developing a particular intrest here  and I wish to grow on it
+        I am setting my sights on becoming a <b>proficient HTML, CSS, and JavaScript</b> wizard.As a first-year student,my enthusiasm for computer science and web development is palpable. I firmly believes that the future lies in digital technology.Guided by the desire to make a meaningful impact in the digital landscape,I have immersed myself in the study of web development languages and techniques, eager to master the art of creating visually stunning and functional websites.HTML, the backbone of frontend development, is a language I finds comfort in.It is simple to use and its essential role in structuring web pages. CSS, on the other hand, allows me to express my creativity by adding vivid colors, stylish layouts, and captivating dsigns to his projects.The process of creating my own website is both exhilarating and challenging for me, but I thrives on every moment of it.<b> I believe that the website I am building is a reflection of my evolving journey as a frontend developer</b>, a canvas on which I can showcase my achievements, thoughts, and artistic inclinations.
+        <br>
+        <br>
+        <br>
+
+        <img src="my photo 1.jpg" alt="photo 1" width="500px">
+    </p>
+    <script>
+        const toggleButton = document.getElementById("toggle-theme");
+const body = document.body;
+
+toggleButton.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  const isDarkMode = body.classList.contains("dark-mode");
+ 
+  localStorage.setItem("darkMode", isDarkMode);
+});
+
+const savedDarkMode = localStorage.getItem("darkMode");
+if (savedDarkMode !== null) {
+  body.classList.toggle("dark-mode", savedDarkMode === "true");
+}
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<style>
+     /* Your existing CSS styles */
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #222;
+  color: #ddd;
+}
+
+.dark-mode button {
+  background-color: #555;
+  color: #ddd;
+}
+
+.dark-mode button:hover {
+  background-color: #333;
+}
+
+/* Add other dark mode specific styles as needed */
+
+</style>
+<body>
+    <div class="container">
+        <button id="toggle-theme"><img src="https://png.pngtree.com/png-clipart/20210829/original/pngtree-dark-mode-icon-light-png-clipart-png-image_6661697.jpg" alt="dark/light" width="15px"></button>
+    </div>
+    <h2>Contact</h2>
+    <p>
+    You may contact me on my email or either instagram and linkedin handles.
+    <ul>
+    <li> Email:
+      You can contact me on my email id
+      aryankumar251204@gmail.com
+    </li>
+    <li>
+        Instagram:
+        My instagram handle is @aryank_2512
+        <br>
+        <br>
+       <a href="https://www.instagram.com/aryank_2512/" target="_main"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="ARYAN'S INSTAGRAM" width="100px"></a>
+       
+   </li>
+      <li>
+        Linkedin:
+        You can find me on linkedin here:
+        <br>
+        <br>
+        <br>
+        <a href="https://in.linkedin.com/" target="_main"><img src="https://visualping.io/blog/images/post/post-63/img1.jpg" alt="ARYAN'S LINKEDIN" width="100px"></a>
+ </li>
+    </ul>
+    </p>
+</body>
+<script>
+      const toggleButton = document.getElementById("toggle-theme");
+const body = document.body;
+
+toggleButton.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  const isDarkMode = body.classList.contains("dark-mode");
+ 
+  localStorage.setItem("darkMode", isDarkMode);
+});
+
+const savedDarkMode = localStorage.getItem("darkMode");
+if (savedDarkMode !== null) {
+  body.classList.toggle("dark-mode", savedDarkMode === "true");
+}
+</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My pictures</title>
+</head>
+<style>
+       /* Your existing CSS styles */
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #222;
+  color: #ddd;
+}
+
+.dark-mode button {
+  background-color: #555;
+  color: #ddd;
+}
+
+.dark-mode button:hover {
+  background-color: #333;
+}
+
+/* Add other dark mode specific styles as needed */
+</style>
+<body>
+    <div class="container">
+        <button id="toggle-theme"><img src="https://png.pngtree.com/png-clipart/20210829/original/pngtree-dark-mode-icon-light-png-clipart-png-image_6661697.jpg" alt="dark/light" width="15px"></button>
+    </div>
+    <h2>
+        MY PICTURES
+      </h2>
+      <p>
+        These are some of the work I have done. I love clicking photographs and it is one of my hobbies. Whenever I am bored, I go to explore places where I can click some pictures. Here is collection of some photographs I clicked:
+        <br>
+        <br>
+        <br>
+        <ul>
+       <li> <img src="photo 2.jpg" alt="photo 2" width="450px"> </li>
+        <li><img src="photo 3.jpg" alt="photo 3" width="450px"> </li>
+       <li><img src="photo 4.jpg" alt="photo 4" width="450px"> </li>
+       <li><img src="photo 5.jpg" alt="photo 5" width="450px"> </li>
+       <li><img src="photo 6.jpg" alt="photo 6" width="450px"> </li>
+       <li><img src="photo 7.jpg" alt="photo 7" width="450px"> </li>
+       <li><img src="photo 8.jpg" alt="photo 8" width="450px"> </li>
+       <li><img src="photo 9.jpg" alt="photo 9" width="450px"> </li>
+       <li><img src="photo 10.jpg" alt="photo 10" width="450px"> </li>
+       <li><img src="photo 11.jpg" alt="photo 11" width="450px"> </li>
+       <li><img src="photo 12.jpg" alt="photo 12" width="450px"> </li>
+   
+        </ul>
+      </p>
+      
+    
+</body>
+<script>
+       const toggleButton = document.getElementById("toggle-theme");
+const body = document.body;
+
+toggleButton.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  const isDarkMode = body.classList.contains("dark-mode");
+ 
+  localStorage.setItem("darkMode", isDarkMode);
+});
+
+const savedDarkMode = localStorage.getItem("darkMode");
+if (savedDarkMode !== null) {
+  body.classList.toggle("dark-mode", savedDarkMode === "true");
+}
+</script>
+</html>
